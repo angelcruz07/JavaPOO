@@ -50,16 +50,16 @@ public class Runner {
 
     public static void main(String[]  args){
         int ultimoRegistro = 0;
-        int respuesta = -1;
+        int request = -1;
         float tiempos[] = new float[10];
         float distancias[] = new float[10];
         String etiquetas[] = new String[10];
 
 
-        respuesta = mostrarMenu(false);
+        request = mostrarMenu(false);
 
-        while(respuesta != 0){
-            switch(respuesta){
+        while(request != 0){
+            switch(request){
                 case 1:
                     nuevoRegistro(tiempos, ultimoRegistro, distancias);
                     ultimoRegistro++;
@@ -74,7 +74,7 @@ public class Runner {
                 default:
                     System.out.println("Opcion no valida");
             }
-            respuesta = mostrarMenu(false);
+            request = mostrarMenu(false);
         }
     }
 }
