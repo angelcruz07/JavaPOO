@@ -7,11 +7,14 @@ public class Room {
     //Properties
     private Position entranceDoor;
     private Position exitDoor;
-
     private Character player;
 
-    public Room() {
-        System.out.println("Creacion de una habitacion");
+    //Constructor
+    public Room(Position entranceDoor, Position exitDoor, Character player) {
+        this.entranceDoor = entranceDoor;
+        this.exitDoor = exitDoor;
+        this.player = player;
+        this.player.setPos(this.entranceDoor);
     }
 
     public Position getEntranceDoor () {
@@ -30,11 +33,19 @@ public class Room {
         this.exitDoor = exitDoor;
     }
 
-    public void setPlayer(Character player)  {
+    public void setCharacter(Character player){
+
+    }
+
+    public void setPlayer(Player player)  {
         this.player = player;
     }
 
     public boolean isDoor(Position door){
         return door.isEqual(entranceDoor) || door.isEqual(exitDoor);
+    }
+
+    public boolean isPlayer(Position player){
+        return this.player.pos.isEqual(this.player.getPos());
     }
 }

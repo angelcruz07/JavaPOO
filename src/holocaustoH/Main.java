@@ -2,16 +2,12 @@ package holocaustoH;
 
 public class Main {
     public static void main(String[] args) {
-        Room initialRoom = new Room();
 
-        Position entranceDoor = new Position();
-        initialRoom.setEntranceDoor(entranceDoor);
+        Position entranceDoor = new Position(0, 3);
+        Position exitDoor = new Position(5, Room.HEIGHT -1);
 
-        Position exitDoor = new Position(5, Room.HEIGHT - 1);
-        initialRoom.setExitDoor(exitDoor);
-
-        Character player = new Character();
-        initialRoom.setPlayer(player);
+        Player player = new Player();
+        Room initialRoom = new Room(entranceDoor, exitDoor, player);
 
         Game.printRoom(initialRoom);
     }
