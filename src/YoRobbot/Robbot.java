@@ -2,14 +2,20 @@ package YoRobbot;
 
 public class Robbot {
     // Propiedades
-
-    //Publica
-    // public float peso;
     private float peso;
+
+    //Piezas del robbot
+    CPU cpu;
+    Bateria bateria;
+
 
     // Constructor
     public Robbot(){
-
+        this.cpu = new CPU();
+        //Aplicando el concepto de herencia
+        this.cpu.setNumSerie("rx2393003");
+        this.bateria = new Bateria();
+        this.bateria.setPeso(2.30f);
     }
 
     //Setters y Getters

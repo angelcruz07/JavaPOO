@@ -5,9 +5,12 @@ public class Principal {
 
         //Objeto
         Robbot robbot = new Robbot();
-
-       // robbot.peso = 120.2f;
+        Robbot paquito = new Robbot();
 
         robbot.setPeso(120.2f);
+        System.out.println(robbot.getPeso());
+
+        paquito.setPeso(120.2f);
+        System.out.println(paquito.getPeso());
     }
 }
