@@ -2,16 +2,17 @@ package holocaustoH;
 
 public class Main {
     public static void main(String[] args) {
+        Room initialRoom = new Room();
 
-        Posicion posInicial = new Posicion(6,6);
-        posInicial.setPosX(6);
-        posInicial.setPosY(6);
+        Position entranceDoor = new Position();
+        initialRoom.setEntranceDoor(entranceDoor);
 
-        Habitacion habitacion1 = new Habitacion();
-        Personaje jugador = new Personaje();
+        Position exitDoor = new Position(5, Room.HEIGHT - 1);
+        initialRoom.setExitDoor(exitDoor);
 
-        jugador.setPos(posInicial);
+        Character player = new Character();
+        initialRoom.setPlayer(player);
 
-        Juego.pintarHabitacion(habitacion1);
+        Game.printRoom(initialRoom);
     }
 }

@@ -1,16 +1,16 @@
 package holocaustoH;
 
-public class Posicion {
+public class Position {
 
     private int posX;
     private int posY;
 
-    public Posicion(){
+    public Position(){
         this.posX = 0;
         this.posY = 0;
     }
 
-    public Posicion(int posX, int posY){
+    public Position(int posX, int posY){
         this.posX = posX;
         this.posY = posY;
     }
@@ -29,6 +29,10 @@ public class Posicion {
 
     public void setPosX(int posX) {
         this.posX = posX;
+    }
+
+    public boolean isEqual(Position pos){
+        return pos.posX == this.posX && pos.posY == this.posY;
     }
 
 }

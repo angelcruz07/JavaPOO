@@ -2,17 +2,17 @@ package holocaustoH;
 
 public class AgujeroNegro {
 
-     Posicion pos;
+     Position pos;
 
     public  AgujeroNegro(){
         System.out.println("Agujero Negro");
     }
 
-    public Posicion getPos() {
+    public Position getPos() {
         return pos;
     }
 
-    public void setPos(Posicion pos) {
+    public void setPos(Position pos) {
         this.pos = pos;
     }
 

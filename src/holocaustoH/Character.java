@@ -1,11 +1,11 @@
 package holocaustoH;
 
-public class Personaje {
+public class Character {
     //Propiedades
     private String nombre;
-    Posicion pos;
+    Position pos;
 
-    public Personaje(){
+    public Character(){
         System.out.println("Creando Personaje...");
     }
 
@@ -17,11 +17,11 @@ public class Personaje {
         this.nombre = nombre;
     }
 
-    public Posicion getPos() {
+    public Position getPos() {
         return pos;
     }
 
-    public void setPos(Posicion pos) {
+    public void setPos(Position pos) {
         this.pos = pos;
     }
 }
