@@ -1,27 +1,36 @@
 package holocaustoH;
 
 public class Character {
-    //Propiedades
-    private String nombre;
-    Position pos;
 
-    public Character(){
-        System.out.println("Creando Personaje...");
-    }
+  private String name;
+  private Position pos;
 
-    public String getNombre() {
-        return nombre;
-    }
+  public Character() {
+    System.out.println("Creando Personaje...");
+  }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public Position getPos() {
-        return pos;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setPos(Position pos) {
-        this.pos = pos;
-    }
+  public Position getPos() {
+    return pos;
+  }
+
+  public void setPos(Position pos) {
+    this.pos = pos;
+  }
+
+  public void movX(int x) {
+    this.pos.setPosX(pos.getPosX() + x) ;
+  }
+
+  public void movY(int y){
+    this.pos.setPosY(pos.getPosY() + y);
+  }
+
 }

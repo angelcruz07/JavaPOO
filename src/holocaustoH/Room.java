@@ -45,7 +45,7 @@ public class Room {
         return door.isEqual(entranceDoor) || door.isEqual(exitDoor);
     }
 
-    public boolean isPlayer(Position player){
-        return this.player.pos.isEqual(this.player.getPos());
+    public boolean isPlayer(Position p){
+        return p.isEqual(player.getPos());
     }
 }
